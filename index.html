@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/form.ico">
+</head>
+<body>
+    <!-- Title -->
+    <div id="title-container">
+        <h2 id="title">High School Seniors Stress Survey</h2>
+        <caption id="description">Thank you for taking the time to fulfill this form</caption>
+    </div>
+
+    <!-- Form  -->
+    <div id="form-container">
+        <form action="#" id="survey-form">
+            <label for="name" id="name-label">First Name</label>
+            <input type="text" id="name" placeholder="Enter your first name here" required>
+            <label for="lname" id="name-label">Last Name</label>
+            <input type="text" id="lname" placeholder="Enter your last name here" required>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" placeholder="Enter your email here" required>
+            <label for="number" id=number-label>Age</label>
+            <input type="number" id="number" placeholder="Enter your age here (optional)" min="14" max="19" >
+            <textarea name="suggestion-box" id="suggestion-box" cols="30" rows="10" placeholder="Leave a comment..."></textarea>
+            
+        </form>
+    </div>
+
+
+    <!-- Validation Script -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
