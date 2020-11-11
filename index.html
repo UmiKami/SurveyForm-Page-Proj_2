@@ -10,8 +10,8 @@
 <body>
     <!-- Title -->
     <div id="title-container">
-        <h2 id="title">High School Seniors Stress Survey</h2>
-        <caption id="description">Thank you for taking the time to fulfill this form</caption>
+        <h1 id="title">High School Seniors Stress Survey</h1>
+        <p id="description">Thank you for taking the time to fulfill this form</p>
     </div>
 
     <!-- Form  -->
@@ -25,8 +25,26 @@
             <input type="email" id="email" placeholder="Enter your email here" required>
             <label for="number" id=number-label>Age</label>
             <input type="number" id="number" placeholder="Enter your age here (optional)" min="14" max="19" >
+            <label for="dropdown">On average, how many hours do you sleep?</label>
+            <select name="dropdown" id="dropdown">
+                <option value="Eight-or-more">More than 8h</option>
+                <option value="Six-Or-more">More than 6h</option>
+                <option value="Four-Or-more">More than 4h</option>
+                <option value="Less-Than-four">Less than 4h</option>
+            </select>
+            <h4>How many hours do you spend doing homework?</h4>
+            <label for="Less-than-1"></label>
+            <input type="radio" value="Less-than-1" name="hw-hours" id="Less-than-1">Less than 1h
+            <label for="More-than-3h"></label>
+            <input type="radio" value="More-than-3h" name="hw-hours" id="More-than-3h">More than 3h
+            <label for="More-than-5h"></label>
+            <input type="radio" value="More-than-5h" name="hw-hours" id="More-than-5h">More than 5h
+            <label for="More-than-8h"></label>
+            <input type="radio" value="More-than-8h" name="hw-hours" id="More-than-8h">More than 8h
+            <label for="More-than-12h"></label>
+            <input type="radio" value="More-than-12h" name="hw-hours" id="More-than-12h">More than 12h
             <textarea name="suggestion-box" id="suggestion-box" cols="30" rows="10" placeholder="Leave a comment..."></textarea>
-            
+            <button id="submit">Submit Form</button>
         </form>
     </div>
 
