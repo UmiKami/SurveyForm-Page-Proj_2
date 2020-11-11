@@ -1,39 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-
-:root{
-    --BMainColor-1: #BD6709;
-    --YMainColor-2: #BABD09;
-    --RMainColor-3: #BD0D09;
-    --Border-Test: 3px solid blue;
+:root {
+  --BMainColor-1: #bd6709;
+  --YMainColor-2: #babd09;
+  --RMainColor-3: #bd0d09;
+  /* --Border-Test: 3px solid blue; */
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    max-width: 100vw;
-    height: auto;
-    background: url("./img/background-img.jpg");
-    background-position: fixed;
-    background-size: cover;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  height: auto;
+  background: url("./img/background-img.jpg");
+  background-size: cover;
+}
+
+/* Title */
+#title-container{
+    text-align: center;
 }
 
 /* Form Container */
 
-#form-container{
-    background-color: rgba(189, 103, 9, 0.7);
-    box-sizing: border-box;
-    padding: 20px;
-    width: 41.66vw;
-    height: auto;
+#form-container {
+  background-color: rgba(189, 103, 9, 0.7);
+  box-sizing: border-box;
+  display: flex;
+  padding: 20px;
+  width: 41.66vw;
+  height: auto;
 }
 
 /* Grid allocation */
-#survey-form{
-    display: grid;
-    grid-template-areas: 
+#survey-form {
+  display: grid;
+  grid-template-areas:
     "fname lname"
     "email ."
     "age ."
@@ -42,66 +49,177 @@ body{
     "question-2 ."
     "question-3 ."
     "comment_submit-area .";
+  width: inherit;
+  gap: 2em;
+}
+
+/* Make input responsive */
+#survey-form input[type="text"] {
+  width: 100%;
+  resize: vertical;
 }
 
 /* Grid boxes */
-#fname-box{
-    grid-area: fname;
-    border: var(--Border-Test);
-    display: flex;
-    flex-direction: column;
+#fname-box {
+  grid-area: fname;
+  border: var(--Border-Test);
+  display: flex;
+  flex-direction: column;
 }
 
-#lname-box{
-    grid-area: lname;
-    border: var(--Border-Test);
-    display: flex;
-    flex-direction: column;
+#lname-box {
+  grid-area: lname;
+  border: var(--Border-Test);
+  display: flex;
+  flex-direction: column;
 }
 
-#email-box{
-    grid-area: email;
-    border: var(--Border-Test);
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
+#email-box {
+  grid-area: email;
+  border: var(--Border-Test);
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
 }
 
-#age-box{
-    grid-area: age;
-    grid-column: 1/-1;
-    border: var(--Border-Test);
-    display: flex;
-    flex-direction: column;
+#age-box {
+  grid-area: age;
+  grid-column: 1/-1;
+  border: var(--Border-Test);
+  display: flex;
+  flex-direction: column;
 }
 
-#question-0{
+#question-0 {
+  grid-area: question-0;
+  border: var(--Border-Test);
+  grid-column: 1/-1;
+}
+
+#question-1 {
+  grid-area: question-1;
+  grid-column: 1/-1;
+  border: var(--Border-Test);
+}
+#question-2 {
+  grid-area: question-2;
+  grid-column: 1/-1;
+  border: var(--Border-Test);
+}
+#question-3 {
+  grid-area: question-3;
+  grid-column: 1/-1;
+  border: var(--Border-Test);
+}
+
+#comment_submit-area-box {
+  grid-area: comment_submit-area;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--Border-Test);
+}
+
+/* Media query */
+@media screen and (max-width: 1000px) {
+  #form-container {
+    width: 50vw;
+  }
+
+  #question-0 {
     grid-area: question-0;
-    border: var(--Border-Test);
     grid-column: 1/-1;
-}
+    display: flex;
+    flex-direction: column;
+    border: var(--Border-Test);
+  }
 
-#question-1{
+  #question-1 {
     grid-area: question-1;
     grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
     border: var(--Border-Test);
-}
-#question-2{
+  }
+  #question-2 {
     grid-area: question-2;
-    grid-column: 1/-1;
-    border: var(--Border-Test);
-}
-#question-3{
-    grid-area: question-3;
-    grid-column: 1/-1;
-    border: var(--Border-Test);
-}
-
-#comment_submit-area-box{
-    grid-area: comment_submit-area;
     grid-column: 1/-1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: var(--Border-Test);
+  }
+  #question-3 {
+    grid-area: question-3;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    border: var(--Border-Test);
+  }
+}
+
+@media screen and (max-width: 745px) {
+  #form-container {
+    width: 70vw;
+  }
+
+  #survey-form {
+    display: grid;
+    grid-template-areas:
+      "fname ."
+      "lname ."
+      "email ."
+      "age ."
+      "question-0 ."
+      "question-1 ."
+      "question-2 ."
+      "question-3 ."
+      "comment_submit-area .";
+    width: inherit;
+    gap: 2em;
+  }
+
+  #fname-box {
+    grid-area: fname;
+    grid-column: 1/-1;
+    border: var(--Border-Test);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #lname-box {
+    grid-area: lname;
+    grid-column: 1/-1;
+    border: var(--Border-Test);
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+  #form-container {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #form-container {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-height: 1300px) {
+  #form-container {
+    font-size: 2rem;
+    width: 70vw;
+  }
+
+  #form-container input, select, textarea, button{
+    font-size: 1.5rem;
+  }
+
+  #title-container{
+      font-size: 1.8rem;
+  }
 }
