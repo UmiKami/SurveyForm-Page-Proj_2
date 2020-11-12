@@ -9,16 +9,21 @@
   </head>
   <body>
     <!-- Title -->
-    <div id="title-container">
-      <h1 id="title">High School Seniors Stress Survey</h1>
-      <p id="description">Thank you for taking the time to fulfill this form</p>
+    <div id="main-title-container">
+        <div id="title-container">
+            <div id="title-background"></div>
+            <h1 id="title">High School Seniors Stress Survey</h1>
+            <p id="description">Thank you for taking the time to fulfill this form</p>
+        </div>
     </div>
+
 
     <!-- Form  -->
     <div id="form-container">
       <form action="#" id="survey-form">
+
         <div id="fname-box">
-          <label for="name" id="name-label">First Name</label>
+          <label for="name" id="name-label" class="input-margin">First Name</label>
           <input
             type="text"
             id="name"
@@ -28,7 +33,7 @@
         </div>
 
         <div id="lname-box">
-          <label for="lname" id="name-label-1">Last Name</label>
+          <label for="lname" id="name-label-1" class="input-margin">Last Name</label>
           <input
             type="text"
             id="lname"
@@ -38,7 +43,7 @@
         </div>
 
         <div id="email-box">
-          <label for="email" id="email-label">Email</label>
+          <label for="email" id="email-label" class="input-margin">Email</label>
           <input
             type="email"
             id="email"
@@ -48,7 +53,7 @@
         </div>
 
         <div id="age-box">
-          <label for="number" id="number-label">Age</label>
+          <label for="number" id="number-label" class="input-margin">Age</label>
           <input
             type="number"
             id="number"
@@ -60,7 +65,7 @@
 
         <!-- Dropdown|Sleep hours -->
         <div id="question-0">
-          <label for="dropdown">On average, how many hours do you sleep?</label>
+          <label for="dropdown"> <strong>On average, how many hours do you sleep?</strong></label>
           <select name="dropdown" id="dropdown">
             <option value="Eight-or-more">More than 8h</option>
             <option value="Six-Or-more">More than 6h</option>
@@ -293,7 +298,7 @@
 
         <div id="comment_submit-area-box">
           <label for="suggestion-box"
-            >Feel free to leave any comments or sugestions below:</label
+            ><strong>Feel free to leave any comments or sugestions below:</strong> </label
           >
           <textarea
             name="suggestion-box"
