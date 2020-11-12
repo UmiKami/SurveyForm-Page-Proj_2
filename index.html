@@ -8,10 +8,14 @@
     <link rel="icon" href="./img/form.ico" />
   </head>
   <body>
+    <!-- Background darker filter -->
+    <div id="body-filter"></div>
+
     <!-- Title -->
     <div id="main-title-container">
         <div id="title-container">
             <div id="title-background"></div>
+            <div id="title-background-2"></div>
             <h1 id="title">High School Seniors Stress Survey</h1>
             <p id="description">Thank you for taking the time to fulfill this form</p>
         </div>
@@ -77,13 +81,13 @@
         <!-- Radio Selection|Homework hours and stress level -->
         <div id="question-1">
           <h4>How many hours do you spend doing homework?</h4>
-          <label for="Less-than-1">
+          <label for="Less-than-1" id="q1-label-1">
             <input
               type="radio"
               value="Less-than-1"
               name="hw-hours"
               id="Less-than-1"
-            />Less than 1h</label
+            /> <span class="radio-check-1"></span> Less than 1h </label
           >
 
           <label for="More-than-3h">
@@ -92,7 +96,7 @@
               value="More-than-3h"
               name="hw-hours"
               id="More-than-3h"
-            />More than 3h</label
+            /> <span class="radio-check"></span> More than 3h</label
           >
 
           <label for="More-than-5h">
@@ -101,7 +105,7 @@
               value="More-than-5h"
               name="hw-hours"
               id="More-than-5h"
-            />More than 5h</label
+            /> <span class="radio-check"></span> More than 5h</label
           >
 
           <label for="More-than-8h">
@@ -110,7 +114,7 @@
               value="More-than-8h"
               name="hw-hours"
               id="More-than-8h"
-            />More than 8h</label
+            /> <span id="radio-check"></span> More than 8h</label
           >
 
           <label for="More-than-12h">
@@ -119,7 +123,7 @@
               value="More-than-12h"
               name="hw-hours"
               id="More-than-12h"
-            />More than 12h</label
+            /> <span class="radio-check"></span> More than 12h</label
           >
         </div>
 
