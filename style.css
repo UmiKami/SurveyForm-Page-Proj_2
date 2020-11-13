@@ -176,6 +176,7 @@ h4 {
 
 input[type=text], input[type=number], input[type=email] {
   border: 3px solid rgb(255, 110, 110);
+  border-radius: 5px;
   transition: 0.5s;
   outline: none;
 }
@@ -196,6 +197,7 @@ select:focus{
 textarea{
   outline: none;
   transition: all 0.2s;
+  border-radius: 10px;
 }
 
 textarea:focus{
